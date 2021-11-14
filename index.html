@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--Bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+
+<!--CSS-->
+<link rel="stylesheet" href="./css/style.css" />
+
+    <title>Cuadros Personalizados | Series & Peliculas</title>
+</head>
+<body>
+<header>
+
+
+   <!--NAVbar-->
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        
+        </li>
+        <li class="nav-item">
+          
+        </li>
+
+      </ul>
+    
+    <div class="navbar-brand divCotizacion" id="cotizacion"></div>
+    </div>
+  </div>
+</nav>
+  <!--Fin NAVbar-->
+<h2 class="titulo">Cuadros Decorativos</h2>
+
+<div>
+  <input onclick="renderizarProductos()" type="radio" id="todos" name="tipoProducto" value="todos" checked>
+  <label for="todos">todos</label>
+
+  <input onclick="renderizarProductos('pelicula')" type="radio" id="pelicula" name="tipoProducto" value="pelicula">
+  <label for="pelicula">pelicula</label>
+
+  <input onclick="renderizarProductos('serie')" type="radio" id="serie" name="tipoProducto" value="serie">
+  <label for="serie">serie</label>
+</div>
+
+
+<div class="container">
+  <div class="row">
+      <main id="items" class="col-sm-9 row"></main>
+
+      <!-- Carrito -->
+      <aside class="col-sm-3">
+          <h2>Detalle de Compra</h2>          
+          <ul id="carrito" class="container-text list-group"></ul>          
+          <p class="container-text text-right">Total: <span id="total"></span></p>
+          <button id="boton-vaciar" class="btn btn-warning">Vaciar Carrito</button>      
+          <button data-bs-toggle="modal" id="btn-comprar" class="btn btn-success">Comprar</button>
+      </aside>
+  </div>
+</div>
+
+ <!-- Modal -->
+ <div class="modal fade" id="ModalError" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">Elige al menos 1 producto para avanzar con tu compra</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Volver
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Avanzá con tu compra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="form" class="form-register" onsubmit="return addProduct()">
+          Nombre:<input type="text" name="fname" value="" id="inputName" required><br />
+          Apellido:<input type="text" name="flastName" value="" id="inputLastName" required><br />
+          Mail:<input type="email" name="mail" value="" id="inputEmail" required><br />
+          Método de pago:<select name="pago" id="inputPaymentMethod">
+            <option value="MERCADO PAGO" selected>MERCADO PAGO</option>
+            <option value="TARJETA DE CREDITO">TARJETA DE CRÉDITO</option>
+            <option value="TARJETA DE DEBITO">TARJETA DE DÉBITO</option>
+          </select>
+          <br />
+          <input type="submit" value="Enviar" id="buttonForm" class="btn btn-primary" />
+        </form>
+
+        <div id="confirmacionDatos"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="boton-seguir" class="btn btn-primary" data-bs-dismiss="modal">
+          Seguir comprando
+        </button>
+        <div class="btn-nueva-compra"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Footer-->
+<footer>
+  
+</footer>
+    
+<!-- Fin del Footer-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="jQuery.min.js"></script>
+<script src="array.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

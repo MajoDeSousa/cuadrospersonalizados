@@ -1,0 +1,46 @@
+body {
+    color: black;
+    background-color:rgb(226, 222, 222);    
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+.container {
+  margin-top: 25px; 
+}
+
+
+
+h2 {
+   color: black;
+   background-color: rgb(226, 222, 222);    
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+   font-size: 20px;
+ }
+
+
+.titulo {
+  color: rgb(97, 96, 96);  
+  margin-top: 20px; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 45px;
+  
+}
+
+#carrito { 
+  
+  margin-bottom: 20px;
+  color: rgb(97, 96, 96);   
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  
+}
+
+.container-text {
+  background-color: rgb(250, 242, 134);
+  
+
+}
+
